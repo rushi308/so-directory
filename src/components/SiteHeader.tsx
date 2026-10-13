@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SiteLogo } from "@/components/SiteLogo";
 
 const links = [
   { href: "/", label: "Browse" },
@@ -9,12 +10,7 @@ export function SiteHeader() {
   return (
     <header className="relative z-20 border-b border-ink/10 bg-cream">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
-        <Link
-          href="/"
-          className="font-display text-lg tracking-tight text-green-900 transition-colors hover:text-green-700 sm:text-xl"
-        >
-          South Oxhey Directory
-        </Link>
+        <SiteLogo />
         <nav className="flex items-center gap-1 sm:gap-2">
           {links.map((link) => (
             <Link
