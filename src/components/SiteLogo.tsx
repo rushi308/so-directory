@@ -52,9 +52,7 @@ export function SiteLogo({
 
   const content = (
     <>
-      <DirectoryMark
-        className={`size-8 shrink-0 sm:size-9 ${onDark ? "text-cream" : "text-green-900"}`}
-      />
+      <DirectoryMark className="size-8 shrink-0 text-green-900 sm:size-9" />
       <span
         className={`font-display tracking-tight ${
           onDark
