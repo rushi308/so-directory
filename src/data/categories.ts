@@ -1,0 +1,74 @@
+import type { Category } from "@/types/directory";
+
+export const categories: Category[] = [
+  {
+    id: "cat-trades",
+    slug: "trades-home",
+    name: "Trades & home",
+    description: "Builders, handymen, and general home repairs around South Oxhey.",
+    icon: "hammer",
+  },
+  {
+    id: "cat-electrical",
+    slug: "electrical",
+    name: "Electrical",
+    description: "Local electricians for wiring, sockets, lighting, and safety checks.",
+    icon: "bolt",
+  },
+  {
+    id: "cat-plumbing",
+    slug: "plumbing",
+    name: "Plumbing",
+    description: "Plumbers for leaks, boilers, bathrooms, and emergency call-outs.",
+    icon: "droplet",
+  },
+  {
+    id: "cat-legal",
+    slug: "legal",
+    name: "Legal",
+    description: "Solicitors and legal help for conveyancing, wills, and advice.",
+    icon: "scale",
+  },
+  {
+    id: "cat-photography",
+    slug: "photography",
+    name: "Photography",
+    description: "Photographers for family, events, and local celebrations.",
+    icon: "camera",
+  },
+  {
+    id: "cat-events",
+    slug: "events-venues",
+    name: "Events & venues",
+    description: "Venues, catering, DJs, and event support for South Oxhey gatherings.",
+    icon: "sparkles",
+  },
+  {
+    id: "cat-cleaning",
+    slug: "cleaning",
+    name: "Cleaning",
+    description: "Home and end-of-tenancy cleaners recommended by neighbours.",
+    icon: "sparkle",
+  },
+  {
+    id: "cat-tutoring",
+    slug: "tutoring-childcare",
+    name: "Tutoring & childcare",
+    description: "Tutors, childminders, and after-school support nearby.",
+    icon: "book",
+  },
+  {
+    id: "cat-health",
+    slug: "health-wellbeing",
+    name: "Health & wellbeing",
+    description: "Local wellbeing, fitness, and care services.",
+    icon: "heart",
+  },
+  {
+    id: "cat-other",
+    slug: "other",
+    name: "Other",
+    description: "Everything else neighbours recommend day to day.",
+    icon: "more",
+  },
+];

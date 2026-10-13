@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --green-950: #0f2419;
+  --green-900: #1a3a2a;
+  --green-800: #234d37;
+  --green-700: #2f6b4a;
+  --green-600: #3d8a5f;
+  --green-500: #4fa06f;
+  --green-100: #e4f0e8;
+  --green-50: #f1f7f3;
+  --cream: #f7f4ef;
+  --cream-deep: #ebe4d8;
+  --stone: #8a8478;
+  --ink: #1c1a17;
+  --ink-soft: #3d3a34;
+  --surface: rgba(247, 244, 239, 0.78);
+  --background: var(--cream);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-green-950: var(--green-950);
+  --color-green-900: var(--green-900);
+  --color-green-800: var(--green-800);
+  --color-green-700: var(--green-700);
+  --color-green-600: var(--green-600);
+  --color-green-500: var(--green-500);
+  --color-green-100: var(--green-100);
+  --color-green-50: var(--green-50);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-stone: var(--stone);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --font-sans: var(--font-source-sans);
+  --font-display: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: var(--cream);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  background-image: none;
+  color: var(--ink);
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  min-height: 100%;
+}
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.9s ease-out both;
+}
+
+.stagger-1 {
+  animation-delay: 0.08s;
+}
+.stagger-2 {
+  animation-delay: 0.16s;
+}
+.stagger-3 {
+  animation-delay: 0.24s;
+}
+
+.listing-stagger > * {
+  animation: fade-up 0.55s ease-out both;
+}
+.listing-stagger > *:nth-child(1) {
+  animation-delay: 0.04s;
+}
+.listing-stagger > *:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.listing-stagger > *:nth-child(3) {
+  animation-delay: 0.12s;
+}
+.listing-stagger > *:nth-child(4) {
+  animation-delay: 0.16s;
+}
+.listing-stagger > *:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.listing-stagger > *:nth-child(6) {
+  animation-delay: 0.24s;
+}
+.listing-stagger > *:nth-child(7) {
+  animation-delay: 0.28s;
+}
+.listing-stagger > *:nth-child(8) {
+  animation-delay: 0.32s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in,
+  .listing-stagger > * {
+    animation: none;
+  }
 }
