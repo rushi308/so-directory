@@ -7,14 +7,14 @@ import {
   HomeListingsFallback,
 } from "@/components/HomeListings";
 import { SearchBar } from "@/components/SearchBar";
-import { getCategories } from "@/lib/directory";
+import { getCategoriesWithListings } from "@/lib/directory";
 
 type HomeProps = {
   searchParams: Promise<{ q?: string }>;
 };
 
 export default function HomePage({ searchParams }: HomeProps) {
-  const categories = getCategories();
+  const categories = getCategoriesWithListings();
 
   return (
     <>
@@ -59,7 +59,7 @@ export default function HomePage({ searchParams }: HomeProps) {
               Browse by category
             </h2>
             <p className="mt-1 text-sm text-ink-soft">
-              From electricians to event cover — pick what you need.
+              Categories with local listings right now — pick what you need.
             </p>
           </div>
           <CategoryNav categories={categories} />

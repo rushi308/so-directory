@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CategoryNav } from "@/components/CategoryNav";
 import { ListingList } from "@/components/ListingList";
 import {
-  getCategories,
+  getCategoriesWithListings,
   getCategoryBySlug,
   getListingsByCategory,
 } from "@/lib/directory";
@@ -14,7 +14,9 @@ type CategoryPageProps = {
 };
 
 export async function generateStaticParams() {
-  return getCategories().map((category) => ({ slug: category.slug }));
+  return getCategoriesWithListings().map((category) => ({
+    slug: category.slug,
+  }));
 }
 
 export async function generateMetadata({
@@ -32,10 +34,9 @@ export async function generateMetadata({
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { slug } = await params;
   const category = getCategoryBySlug(slug);
-  if (!category) notFound();
-
-  const categories = getCategories();
-  const listings = getListingsByCategory(category.id);
+  const categories = getCategoriesWithListings();
+  const listings = category ? getListingsByCategory(category.id) : [];
+  if (!category || listings.length === 0) notFound();
 
   return (
     <div className="mx-auto max-w-5xl px-5 py-12 sm:px-8 sm:py-16">

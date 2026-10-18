@@ -18,6 +18,12 @@ export function getCategories(): Category[] {
   return categories;
 }
 
+/** Categories that currently have at least one listing. */
+export function getCategoriesWithListings(): Category[] {
+  const usedIds = new Set(listings.map((l) => l.categoryId));
+  return categories.filter((c) => usedIds.has(c.id));
+}
+
 export function getCategoryBySlug(slug: string): Category | undefined {
   return categories.find((c) => c.slug === slug);
 }
