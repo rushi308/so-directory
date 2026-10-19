@@ -86,4 +86,20 @@ export const listings: Listing[] = [
     ],
     featured: true,
   },
+  {
+    id: "lst-5",
+    slug: "you-passed-driving-school",
+    name: "You Passed Driving School",
+    categoryId: "cat-driving",
+    shortDescription: "Family-run driving tuition with approved instructors.",
+    description:
+      "Local driving school offering driving tuition. A family business run by family members who are all approved driving instructors. Based on Greenfield Avenue, South Oxhey.",
+    area: "South Oxhey",
+    phone: "07984 358638",
+    whatsapp: "447984358638",
+    email: "hi@youpassed.co.uk",
+    website: "https://youpassed.co.uk",
+    tags: ["driving school", "driving lessons", "ADI"],
+    featured: true,
+  },
 ];

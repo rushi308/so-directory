@@ -65,6 +65,13 @@ export const categories: Category[] = [
     icon: "heart",
   },
   {
+    id: "cat-driving",
+    slug: "driving",
+    name: "Driving",
+    description: "Local driving schools and approved instructors.",
+    icon: "car",
+  },
+  {
     id: "cat-other",
     slug: "other",
     name: "Other",
