@@ -72,6 +72,20 @@ export const categories: Category[] = [
     icon: "car",
   },
   {
+    id: "cat-beauty",
+    slug: "beauty",
+    name: "Beauty",
+    description: "Makeup, beauty, and personal care services nearby.",
+    icon: "sparkle",
+  },
+  {
+    id: "cat-sports",
+    slug: "sports-coaching",
+    name: "Sports & coaching",
+    description: "Local sports coaching and activity clubs for kids and adults.",
+    icon: "trophy",
+  },
+  {
     id: "cat-other",
     slug: "other",
     name: "Other",
