@@ -149,4 +149,19 @@ export const listings: Listing[] = [
     tags: ["darts", "coaching", "kids", "PDPA"],
     featured: true,
   },
+  {
+    id: "lst-9",
+    slug: "place-and-pour",
+    name: "Place & Pour",
+    categoryId: "cat-events",
+    shortDescription:
+      "Wedding and events decorations, plus event supplies.",
+    description:
+      "Wedding and events decorations and event supplies for local celebrations. Based on Oxhey Drive, South Oxhey (WD19).",
+    area: "South Oxhey",
+    phone: "07846 297045",
+    website: "https://www.placeandpour.co.uk",
+    tags: ["weddings", "events", "decorations", "supplies"],
+    featured: true,
+  },
 ];
