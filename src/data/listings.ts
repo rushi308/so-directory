@@ -164,4 +164,20 @@ export const listings: Listing[] = [
     tags: ["weddings", "events", "decorations", "supplies"],
     featured: true,
   },
+  {
+    id: "lst-10",
+    slug: "atoz-basket",
+    name: "Atoz Basket",
+    categoryId: "cat-groceries",
+    shortDescription: "Online groceries store for everyday shopping.",
+    description:
+      "Online groceries store serving the local area. Based on Hayling Road, South Oxhey (WD19).",
+    area: "South Oxhey",
+    phone: "07344 591735",
+    whatsapp: "447344591735",
+    email: "info@atozbasket.co.uk",
+    website: "https://atozbasket.co.uk",
+    tags: ["groceries", "online shopping", "delivery"],
+    featured: true,
+  },
 ];

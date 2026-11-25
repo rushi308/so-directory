@@ -86,6 +86,13 @@ export const categories: Category[] = [
     icon: "trophy",
   },
   {
+    id: "cat-groceries",
+    slug: "groceries",
+    name: "Groceries",
+    description: "Local and online grocery stores for everyday shopping.",
+    icon: "basket",
+  },
+  {
     id: "cat-other",
     slug: "other",
     name: "Other",
